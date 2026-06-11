@@ -1,0 +1,16 @@
+# Blueprint cho Render.com - deploy tự động khi nối repo
+services:
+  - type: web
+    name: script-lorebook
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      # sync: false = giá trị nhập tay trong dashboard, không lưu vào git
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        sync: false
+      - key: OPENAI_MODEL
+        sync: false

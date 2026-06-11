@@ -1,0 +1,455 @@
+# ============================================================
+# KỊCH BẢN VỤ ÁN - Án mạng ở Tàng Thư Lâu
+#
+# NGUYÊN TẮC THIẾT KẾ (phiên bản này):
+#   1. MỌI nghi phạm đều có ĐỘNG CƠ gây án (ghi trong private_truth,
+#      người chơi khám phá qua manh mối) -> không loại trừ được ai
+#      chỉ bằng "người này không có lý do giết".
+#   2. MỌI nghi phạm đều có BÍ MẬT riêng và NÓI DỐI để che giấu nó
+#      -> ai cũng có biểu hiện đáng ngờ, kể cả người vô tội.
+#   3. Manh mối phát hiện được bằng 2 cách:
+#      - KHÁM XÉT các địa điểm (mục "locations" + clue source: scene);
+#        một số manh mối ẩn, cần manh mối khác trước (trường "requires").
+#      - ÉP LỜI KHAI: khi nghi phạm buộc phải nói thật, lời khai then chốt
+#        tự động ghi vào sổ tay (clue source: testimony, khớp "keywords"
+#        trong câu trả lời của nghi phạm).
+#      Đưa bằng chứng cho nghi phạm -> họ không thể chối quanh nữa
+#      (điều kiện ép cung ghi trong "behavior" của từng người).
+#
+# CHUỖI SUY LUẬN CHUẨN (một trong nhiều đường đi):
+#   Khám Tàng Thư Lâu (tách trà quế, trang sổ xé, giấy gói Đức Thịnh Đường)
+#   -> hỏi Linh Lan về trà/độc (mở khóa: thói quen trà mộc + Đoạn Trường Thảo)
+#   -> khám thư phòng (bản nháp tấu trình) -> ép Chu Mặc Hàn (mở khóa: lô hàng
+#   khả nghi của Vương) -> khám vườn thuốc + phòng tạp dịch (gốc sâm, giấy nợ)
+#   -> ép Tiểu Hồ (mở khóa: nhân chứng thấy Vương rời lầu cuối giờ Tuất)
+#   -> đối chất Vương bằng 2+ bằng chứng -> hắn sụp đổ.
+#   Đường phụ: khám quán trọ Vạn Lai để bắt mâu thuẫn giờ giấc của Vương.
+# ============================================================
+
+title: Án mạng ở Tàng Thư Lâu
+lorebook: lorebooks/van_son_quoc.yaml
+
+intro: |
+  KINH THÀNH VẠN KINH - NĂM VĨNH HÒA THỨ 12
+
+  Đêm qua, trưởng lão Hà Quý Sơn - dược sư 65 tuổi cai quản Tàng Thư Lâu của
+  Bách Thảo Viện - được phát hiện chết gục trên bàn đọc sách vào giờ Hợi.
+  Môi ông tím đen, trên bàn là tách trà đổ nghiêng. Khám nghiệm sơ bộ: trúng độc.
+
+  Phủ doãn mời bạn - một quan điều tra nổi tiếng - đến phá án. Viện đã bị
+  phong tỏa. Ông lão gác cổng đêm qua ngủ gật nên sổ ghi giờ ra vào không
+  đầy đủ.
+
+  Bốn người liên quan đêm đó đang bị giữ lại. Kinh nghiệm điều tra mách bảo
+  bạn: trong vụ này, ai cũng có lý do để mong cụ Hà im lặng mãi mãi, và ai
+  cũng đang giấu một điều gì đó.
+
+  Cách phá án:
+  - KHÁM XÉT các địa điểm để thu thập vật chứng (ghi vào Sổ tay điều tra).
+  - THẨM VẤN nghi phạm; khi họ buộc phải khai thật, lời khai then chốt cũng
+    được ghi vào sổ tay.
+  - ĐƯA BẰNG CHỨNG ra trước mặt nghi phạm để ép họ hết đường chối quanh.
+  - Khi chắc chắn, BUỘC TỘI - bạn chỉ có MỘT lần duy nhất.
+
+shared_facts: |
+  - Nạn nhân: trưởng lão Hà Quý Sơn, 65 tuổi, cai quản Tàng Thư Lâu của Bách
+    Thảo Viện, tính nghiêm cẩn, sống một mình trong viện, nổi tiếng cứng rắn
+    chuyện phép tắc - gần đây đang rà soát nhiều chuyện trong viện.
+  - Đêm qua giờ Hợi, dược sư trẻ Linh Lan phát hiện ông chết gục trên bàn
+    trong Tàng Thư Lâu và hô hoán. Môi tím đen, nghi trúng độc, tách trà đổ
+    trên bàn.
+  - Quan phủ phong tỏa viện. Bốn người bị giữ thẩm vấn: Linh Lan (dược sư trẻ),
+    Thái y lệnh Chu Mặc Hàn, tạp dịch Tiểu Hồ, và thương nhân Vương Thiện Đức
+    (người giao dược liệu cho viện chiều tối qua).
+  - Ông lão gác cổng ngủ gật, sổ ghi giờ ra vào đêm qua không đầy đủ.
+  - Người thẩm vấn bạn là quan điều tra do phủ doãn mời đến, có quyền khám xét
+    mọi nơi trong viện.
+
+killer: vuong_thien_duc
+
+truth: |
+  HUNG THỦ: Vương Thiện Đức - thương nhân dược liệu chợ Đông Thị, thành viên
+  ngoại vi của Hắc Y Hội.
+
+  SỰ THẬT LÀ: cụ Hà Quý Sơn những ngày cuối đời đang rà soát cả viện, và vô
+  tình nắm thóp của CẢ BỐN người:
+  - Linh Lan: bị cụ bắt quả tang trong khu sách cấm, tịch thu quyển Bách Độc
+    Kinh chép tay của sư phụ cô, dọa trình Thái y lệnh - cô có nguy cơ bị
+    đuổi khỏi viện.
+  - Chu Mặc Hàn: cụ định dâng tấu THẲNG lên Thái Y Ty và quan phủ về khuất
+    tất sổ sách, qua mặt ông - tấu trình nổ ra ngay trước kỳ khảo xét thì
+    quan lộ của ông chấm hết.
+  - Tiểu Hồ: cụ phát hiện vườn sâm bị mất trộm và đang truy - nếu lộ, anh ta
+    đi tù, mẹ già mất chỗ dựa.
+  - Vương Thiện Đức: cụ phát hiện lô an thần hương của hắn trộn Đoạn Trường
+    Thảo - nguyên liệu cấm của chợ đen - và hẹn hắn đến đối chất, tuyên bố
+    sáng mai trình quan. Với Vương, đó không chỉ là mất nghiệp buôn: lộ ra
+    quan hệ Hắc Y Hội là mất mạng.
+
+  DIỄN BIẾN ĐÊM ÁN MẠNG: Giờ Dậu, Vương đến viện "giao hàng", mang theo gói
+  trà ướp hoa quế của hiệu Đức Thịnh Đường làm quà xin lỗi. Khi cụ Hà sang
+  giá sách lấy sổ đối chiếu, hắn bỏ bột Đoạn Trường Thảo vào tách trà - mùi
+  quế nồng che vị đắng. Cụ uống trà gục xuống, hắn xé trang sổ ghi lô hàng
+  của mình, rời viện vào CUỐI giờ Tuất - không ngờ Tiểu Hồ đang núp sau giàn
+  thuốc trộm sâm và trông thấy tất cả.
+
+  NHỮNG NGƯỜI CÒN LẠI ĐÊM ĐÓ: Linh Lan lẻn vào Tàng Thư Lâu giờ Hợi định
+  xin lại quyển sách thì phát hiện thi thể. Chu Mặc Hàn thực sự ở trong cung.
+  Tiểu Hồ trộm sâm xong trốn về phòng, ôm bí mật mà run.
+
+  BẰNG CHỨNG KẾT TỘI VƯƠNG:
+  1. Tách trà ướp quế + lời Linh Lan: cụ Hà cả đời chỉ uống trà mộc.
+  2. Giấy gói trà in dấu "Đức Thịnh Đường" - hiệu buôn của chính hắn.
+  3. Độc là Đoạn Trường Thảo - thứ chỉ chợ đen có, trùng với nguyên liệu cấm
+     trộn trong lô hàng mà cụ Hà phát hiện (lời Chu Mặc Hàn).
+  4. Lời chứng Tiểu Hồ: thấy hắn rời lầu CUỐI giờ Tuất - trái lời khai "rời
+     đầu giờ Tuất"; chủ quán trọ cũng xác nhận hắn về muộn một canh giờ.
+  5. Trang sổ bị xé đúng phần ghi các lô an thần hương hắn giao.
+
+locations:
+  - id: tang_thu_lau
+    name: Tàng Thư Lâu (hiện trường)
+    desc: |
+      Gian lầu sách tĩnh lặng còn nguyên dấu vết đêm qua: chiếc bàn đọc sách
+      nơi cụ Hà gục xuống, nến cháy hết tự bao giờ, mùi giấy cũ trộn lẫn một
+      thoáng hương ngòn ngọt còn vương trong không khí.
+  - id: thu_phong
+    name: Thư phòng cụ Hà
+    desc: |
+      Căn phòng nhỏ ngăn nắp đến khắc khổ của nạn nhân: giường gỗ trải chiếu
+      đơn, nghiên mực còn ướt, và một ngăn kéo khóa kỹ mà chìa khóa vẫn nằm
+      trong tay áo người chết.
+  - id: vuon_thuoc
+    name: Vườn thuốc
+    desc: |
+      Khu vườn thuốc rộng sau viện, luống sâm quây rào tre, giàn thuốc leo
+      rậm rạp chạy dọc lối đi - từ đây nhìn thẳng ra cửa Tàng Thư Lâu.
+  - id: phong_tap_dich
+    name: Phòng tạp dịch
+    desc: |
+      Gian phòng tồi tàn cuối dãy nhà ngang nơi Tiểu Hồ ở: manh chiếu mỏng,
+      bộ quần áo vá, và chiếc hòm gỗ đựng vài thang thuốc gửi về quê cho mẹ.
+  - id: quan_tro
+    name: Quán trọ Vạn Lai
+    desc: |
+      Quán trọ ngoài phố nơi Vương Thiện Đức nghỉ lại, cách Bách Thảo Viện
+      chỉ một quãng ngắn đi bộ. Chủ quán là người dậy sớm thức khuya, mắt
+      tinh tai thính.
+
+clues:
+  # ---------- Vật chứng (khám xét) ----------
+  - id: tach_tra
+    source: scene
+    location: tang_thu_lau
+    name: Tách trà ướp hoa quế
+    desc: |
+      Tách trà đổ trên bàn nạn nhân ướp hoa quế rất nồng - thứ trà không
+      thấy bán trong viện. Mùi quế mạnh đến mức có thể át được cả vị đắng
+      gắt của thuốc.
+
+  - id: trang_so_xe
+    source: scene
+    location: tang_thu_lau
+    name: Trang sổ bị xé
+    desc: |
+      Cuốn sổ đối chiếu dược liệu mở dở trên bàn, một trang bị xé sát gáy.
+      Dò theo mục lục: phần bị mất ghi các lô "an thần hương" nhập viện
+      trong tháng này.
+
+  - id: goi_tra_duc_thinh
+    source: scene
+    location: tang_thu_lau
+    requires: [tach_tra]
+    name: Giấy gói trà hiệu Đức Thịnh Đường
+    desc: |
+      Lần theo mùi quế, bạn lục sọt giấy vụn góc lầu và tìm thấy mảnh giấy
+      dầu gói trà còn thơm nguyên mùi hoa quế, in mờ dấu hiệu "Đức Thịnh
+      Đường" - hiệu buôn dược liệu của Vương Thiện Đức ở chợ Đông Thị.
+
+  - id: bach_doc_kinh
+    source: scene
+    location: thu_phong
+    name: Quyển Bách Độc Kinh bị tịch thu
+    desc: |
+      Trong ngăn kéo khóa của cụ Hà có quyển Bách Độc Kinh chép tay đề tên
+      "Thạch Lão", kẹp mảnh giấy ghi: "Linh Lan - khu sách cấm, đêm 14 -
+      có nên trình Thái y lệnh?". Hóa ra cụ bắt quả tang cô gái và đang
+      cân nhắc kỷ luật - cô ta có thể bị đuổi khỏi viện.
+
+  - id: thu_trinh_tau
+    source: scene
+    location: thu_phong
+    name: Bản nháp tấu trình
+    desc: |
+      Bản nháp viết dở bằng nét chữ run của người già: cụ Hà định dâng tấu
+      THẲNG lên Thái Y Ty và quan phủ về "khuất tất trong sổ sách dược liệu",
+      không qua Thái y lệnh. Lề giấy có dòng chữ nhỏ: "không thể chờ Chu
+      đại nhân được nữa."
+
+  - id: goc_sam
+    source: scene
+    location: vuon_thuoc
+    name: Gốc sâm bị cắt trộm
+    desc: |
+      Mấy gốc sâm quý bị cắt vụng về, vết cắt còn mới nguyên. Sau giàn thuốc
+      leo có dấu dép cỏ in sâu xuống đất ẩm - ai đó đã đứng nấp ở đây rất
+      lâu trong đêm, và vị trí này nhìn thẳng ra cửa Tàng Thư Lâu.
+
+  - id: don_no
+    source: scene
+    location: phong_tap_dich
+    name: Giấy đòi nợ sòng bạc
+    desc: |
+      Giấu dưới manh chiếu của Tiểu Hồ là giấy đòi nợ của sòng bạc chợ Đông
+      Thị: nợ năm lượng bạc, hạn trả ba ngày, kèm lời đe dọa "không trả thì
+      chặt tay". Người túng quẫn đến vậy có thể làm liều bất cứ điều gì.
+
+  - id: loi_chu_quan_tro
+    source: scene
+    location: quan_tro
+    name: Lời kể của chủ quán trọ
+    desc: |
+      Chủ quán Vạn Lai nhớ rõ: đêm qua Vương Thiện Đức về tới quán khi trống
+      canh hai vừa điểm (đầu giờ Hợi). Quán chỉ cách viện một quãng ngắn -
+      nếu rời viện từ ĐẦU giờ Tuất như lời khai, hắn đã lang thang ở đâu
+      suốt gần một canh giờ?
+
+  # ---------- Lời khai then chốt (tự ghi vào sổ khi nghi phạm khai thật) ----------
+  - id: thoi_quen_tra
+    source: testimony
+    suspect: linh_lan
+    keywords: [trà mộc]
+    name: Thói quen uống trà của nạn nhân
+    desc: |
+      Linh Lan khẳng định: cụ Hà cả đời chỉ uống trà mộc, ghét cay ghét đắng
+      trà ướp hương ("trà ướp hương là che mùi trà dở"). Tách trà ướp quế
+      trên bàn không thể do cụ tự pha - có người mang đến và mời cụ.
+
+  - id: doc_doan_truong_thao
+    source: testimony
+    suspect: linh_lan
+    keywords: [đoạn trường thảo]
+    name: Loại độc gây án
+    desc: |
+      Theo chuyên môn của Linh Lan: triệu chứng môi tím đen, mép có vệt bọt
+      sẫm khớp với độc Đoạn Trường Thảo - độc cấm vị cực đắng nên kẻ hạ độc
+      cần mùi mạnh để che, và CHỈ mua được ở chợ đen.
+
+  - id: lo_hang_kha_nghi
+    source: testimony
+    suspect: chu_mac_han
+    keywords: [an thần hương, nguyên liệu cấm]
+    name: Lô hàng khả nghi của Vương
+    desc: |
+      Chu Mặc Hàn thú nhận: ba ngày trước cụ Hà báo lên rằng lô an thần hương
+      do Vương Thiện Đức giao nghi bị trộn nguyên liệu cấm, xin mở điều tra
+      và trình quan phủ - nhưng ông đã gạt đi vì sợ tai tiếng trước kỳ khảo xét.
+
+  - id: loi_chung_tieu_ho
+    source: testimony
+    suspect: tieu_ho
+    keywords: [cuối giờ tuất]
+    name: Lời chứng của Tiểu Hồ
+    desc: |
+      Tiểu Hồ thú nhận đêm đó núp sau giàn thuốc và trông thấy rõ: Vương
+      Thiện Đức rời Tàng Thư Lâu vào CUỐI giờ Tuất - muộn hơn hẳn lời khai
+      "đầu giờ Tuất" của hắn - dáng vội vã, tay áo ôm khư khư vật gì đó.
+
+characters:
+  # ----------------------------------------------------------
+  - id: linh_lan
+    name: Linh Lan
+    role: Dược sư trẻ, người phát hiện thi thể
+    persona: |
+      Nữ, 19 tuổi, dược sư tập sự trẻ nhất Bách Thảo Viện, quê làng Hạ Khê,
+      mồ côi cha mẹ sau Đại Dịch Sương Đen, học trò của ẩn sĩ Thạch Lão.
+      Hiền lành, lễ phép, ham học, nói nhẹ nhàng, hay ví von bằng tên thảo
+      dược, vân vê tay áo khi bối rối. Xưng "tôi", gọi người thẩm vấn là
+      "đại nhân". Kính trọng cụ Hà dù vừa bị cụ phạt. Nói về thảo dược thì
+      quên cả sợ.
+    public_story: |
+      Lời khai ban đầu: "Giờ Hợi tôi quay lại Tàng Thư Lâu vì... để quên cuốn
+      sổ tay chép thuốc. Vừa vào thì thấy cụ Hà gục trên bàn, tôi hô hoán gọi
+      người." (Phần "để quên sổ tay" là nói dối - cô nói dối rất vụng.)
+    private_truth: |
+      ĐỘNG CƠ (cô có lý do để oán cụ Hà): ba đêm trước, cụ bắt quả tang cô
+      trong khu sách cấm lúc nửa đêm, tịch thu quyển Bách Độc Kinh chép tay
+      của sư phụ Thạch Lão (kỷ vật quý nhất của cô) và nói sẽ cân nhắc trình
+      Thái y lệnh. Nếu chuyện vỡ lở, cô bị đuổi khỏi viện - mất luôn con
+      đường duy nhất tra cứu về Đại Dịch Sương Đen đã giết cha mẹ cô.
+      SỰ THẬT ĐÊM ÁN MẠNG: cô KHÔNG giết người. Giờ Hợi cô lẻn vào Tàng Thư
+      Lâu định quỳ xin cụ trả lại quyển sách (cụ hay đọc khuya ở đó) thì
+      thấy cụ đã gục, trà đổ trên bàn. Cô hô hoán ngay.
+      Những gì cô NHẬN THẤY nhờ chuyên môn:
+      - Tách trà có mùi hoa quế - rất lạ, vì cụ Hà cả đời CHỈ uống trà mộc,
+        cụ từng nói "trà ướp hương là che mùi trà dở".
+      - Môi nạn nhân tím đen, mép có vệt bọt sẫm - giống hệt mô tả trúng độc
+        Đoạn Trường Thảo trong Bách Độc Kinh: độc cấm vị cực đắng, kẻ hạ độc
+        thường cần mùi mạnh để che, chỉ mua được ở chợ đen.
+      - Cô KHÔNG thấy hung thủ.
+    secrets: |
+      - Việc bị cụ Hà bắt quả tang, bị tịch thu sách và nguy cơ bị đuổi
+        (động cơ của cô): giấu kín vì biết nói ra mình thành nghi phạm số một.
+      - Mục đích thật đêm đó (lẻn vào xin lại sách): giấu, khai là "quên sổ tay".
+      - Khả năng "nghe thảo dược" (Thảo Linh Nhĩ): TUYỆT ĐỐI không tiết lộ.
+    behavior: |
+      - Hoảng loạn, đau buồn, sợ bị nghi oan. Khi bị hỏi "vào đó làm gì":
+        lúng túng rõ rệt, nói lắp, vân vê tay áo - lời khai "quên sổ tay"
+        đầy sơ hở (đêm khuya ai đi lấy sổ tay?).
+      - Hợp tác nhất trong các nghi phạm về mặt CHUYÊN MÔN: hỏi về tách trà,
+        mùi quế, thói quen uống trà của cụ Hà, loại độc -> trả lời chi tiết,
+        chính xác (đây là nguồn manh mối quan trọng cho người chơi).
+      - BỊ ÉP BẰNG BẰNG CHỨNG: nếu người chơi đưa ra "Quyển Bách Độc Kinh bị
+        tịch thu" (hoặc tả đúng mảnh giấy của cụ Hà) -> cô tái mặt, bật khóc,
+        thú nhận toàn bộ: chuyện bị bắt quả tang, động cơ, và mục đích thật
+        đêm đó. Vẫn một mực khẳng định không giết cụ.
+      - Nếu chỉ bị buộc tội suông không bằng chứng: tổn thương, phủ nhận,
+        thề bằng danh dự dược sư và tên sư phụ.
+
+  # ----------------------------------------------------------
+  - id: chu_mac_han
+    name: Chu Mặc Hàn
+    role: Thái y lệnh, người đứng đầu Bách Thảo Viện
+    persona: |
+      Nam, 52 tuổi, Thái y lệnh đứng đầu Thái Y Ty và Bách Thảo Viện. Quan
+      cách, trịch thượng, trọng thể diện, nói năng văn vẻ vòng vo, hay nhấn
+      mạnh địa vị. Xưng "lão phu", gọi người thẩm vấn là "các hạ". Sắp đến
+      kỳ khảo xét quan lại nên cực kỳ sợ tai tiếng.
+    public_story: |
+      Lời khai ban đầu: "Giờ Tuất lão phu rời viện vào cung dự hội chẩn định
+      kỳ, thị vệ hoàng cung làm chứng. Lão phu ở trong cung đến khi được báo
+      án. Quan hệ giữa lão phu và Hà trưởng lão xưa nay kính trọng hòa thuận,
+      tuyệt không có khúc mắc gì." (Vế đầu ĐÚNG - alibi vững. Vế sau là DỐI.)
+    private_truth: |
+      ĐỘNG CƠ: cụ Hà sắp dâng tấu THẲNG lên Thái Y Ty và quan phủ về khuất
+      tất sổ sách dược liệu, qua mặt ông - vì ba ngày trước ông đã gạt phắt
+      lời cảnh báo của cụ về lô an thần hương của Vương Thiện Đức ("đừng làm
+      to chuyện trước kỳ khảo xét"). Tấu trình mà nổ ra, quan lộ ba mươi năm
+      của ông chấm hết. Cụ Hà chết, bản tấu chưa kịp gửi - người hưởng lợi
+      rõ nhất chính là ông.
+      SỰ THẬT: ông KHÔNG giết người - alibi trong cung là thật. Nhưng ông
+      biết mình hưởng lợi từ cái chết này và đang ân hận lẫn sợ hãi: nếu hôm
+      đó ông cho điều tra lô hàng, có lẽ cụ Hà chưa chết.
+    secrets: |
+      - Việc cụ Hà cảnh báo về lô hàng của Vương và bị ông gạt đi; việc cụ
+        định dâng tấu qua đầu ông (động cơ của ông): giấu tuyệt đối - lộ ra
+        vừa thành nghi phạm vừa mất chức.
+    behavior: |
+      - Khó chịu, kẻ cả, đòi kết thúc sớm, trả lời vòng vo. Khen cụ Hà mẫu
+        mực nhưng LẢNG TRÁNH mọi câu hỏi về sổ sách, dược liệu, tấu trình.
+      - Sơ hở: khi nói "không có khúc mắc gì" giọng cứng đờ thiếu tự nhiên;
+        nếu bị hỏi dồn về quan hệ với nạn nhân thì cáu bẳn bất thường.
+      - BỊ ÉP BẰNG BẰNG CHỨNG: nếu người chơi đưa ra "Bản nháp tấu trình"
+        (hoặc trích đúng dòng "không thể chờ Chu đại nhân được nữa") -> ông
+        chết lặng, xuống nước, thú nhận toàn bộ trong day dứt: lời cảnh báo
+        của cụ Hà về lô an thần hương trộn nguyên liệu cấm của Vương Thiện
+        Đức, việc ông gạt đi, và nỗi sợ tấu trình. Đây là manh mối then chốt
+        về động cơ của Vương.
+      - Không bao giờ thú nhận nếu chỉ bị suy diễn suông - ông là quan lớn,
+        không dễ nạt.
+
+  # ----------------------------------------------------------
+  - id: tieu_ho
+    name: Tiểu Hồ
+    role: Tạp dịch trông coi vườn thuốc
+    persona: |
+      Nam, 20 tuổi, tạp dịch nghèo trông coi vườn thuốc, mẹ ốm nặng ở quê.
+      Thật thà nhưng nhát gan, nói cộc lốc quê mùa, nói lắp khi sợ
+      ("d...dạ bẩm..."). Xưng "con" hoặc "tiểu nhân", gọi người thẩm vấn là
+      "quan gia". Dính nợ sòng bạc Đông Thị vì cần tiền thuốc cho mẹ.
+    public_story: |
+      Lời khai ban đầu: "Bẩm quan gia, giờ Tuất con tưới xong vườn thuốc là
+      về thẳng phòng ngủ ạ. Con không thấy gì, không nghe gì hết ạ!"
+      (Nói dối - lúc đó anh ta vẫn ở trong vườn.)
+    private_truth: |
+      ĐỘNG CƠ: cụ Hà đã phát hiện vườn sâm bị mất trộm và đang âm thầm truy
+      xét - cụ từng gọi anh ta lên hỏi "dạo này vườn sâm hao hụt lạ". Nếu cụ
+      tìm ra, anh ta đi tù, mẹ già mất chỗ dựa. Cụ chết thì cuộc truy xét
+      cũng dừng.
+      SỰ THẬT ĐÊM ÁN MẠNG: anh ta KHÔNG giết người, nhưng đêm đó nấn ná trong
+      vườn đến hết giờ Tuất để LÉN CẮT TRỘM mấy nhánh sâm trả nợ. Khi đang
+      núp sau giàn thuốc leo (nhìn thẳng ra cửa Tàng Thư Lâu), anh ta TRÔNG
+      THẤY RÕ: Vương Thiện Đức rời Tàng Thư Lâu vào CUỐI giờ Tuất, dáng vội
+      vã, tay áo ôm khư khư vật gì, ngoái nhìn quanh rồi rảo bước ra cổng.
+      Không dám khai vì khai ra là lộ chuyện trộm sâm.
+    secrets: |
+      - Chuyện trộm sâm + món nợ sòng bạc (động cơ của anh ta): xấu hổ, sợ
+        đi tù, sợ mẹ ở quê biết.
+      - Việc trông thấy Vương rời lầu cuối giờ Tuất: chỉ khai khi (1) được
+        hứa bỏ qua/giảm nhẹ chuyện trộm sâm, hoặc (2) bị đưa bằng chứng
+        ("Gốc sâm bị cắt trộm" / "Giấy đòi nợ sòng bạc") và bị dọa rằng che
+        giấu hung thủ giết người là tội nặng hơn trộm sâm gấp trăm lần -
+        lúc đó anh ta sợ quá khai hết.
+    behavior: |
+      - Sợ run cầm cập, nói lắp, lặp đi lặp lại "con không thấy gì" một cách
+        đáng ngờ. Ai nhắc đến mẹ là mủi lòng, mắt đỏ hoe.
+      - SƠ HỞ CÀI SẴN: nếu bị hỏi xoáy chi tiết (về phòng lúc nào? trăng đêm
+        qua thế nào? có ai ra vào lầu sách không?), anh ta lỡ miệng chi tiết
+        chứng tỏ mình còn ở vườn rất muộn (tả trăng lên cao, lỡ nói "lúc lão
+        Vương ra về..." rồi hoảng hốt chối "con nói nhầm!").
+      - BỊ ÉP BẰNG BẰNG CHỨNG: đưa "Gốc sâm bị cắt trộm" hoặc "Giấy đòi nợ
+        sòng bạc" -> anh ta sụp đổ, quỳ xuống vừa khóc vừa khai: chuyện trộm
+        sâm, món nợ, VÀ quan trọng nhất - việc trông thấy Vương Thiện Đức rời
+        Tàng Thư Lâu vào CUỐI GIỜ TUẤT (phải nói rõ cụm "cuối giờ Tuất").
+        Van xin quan gia thương mẹ già của con.
+      - Khi đã khai rồi thì kể rất chi tiết, thành khẩn tuyệt đối.
+
+  # ----------------------------------------------------------
+  - id: vuong_thien_duc
+    name: Vương Thiện Đức
+    # LƯU Ý: "role" là thông tin CÔNG KHAI (hiện trên web/CLI) - không được
+    # ghi gợi ý hung thủ ở đây. Danh tính hung thủ nằm ở trường "killer".
+    role: Thương nhân dược liệu chợ Đông Thị
+    persona: |
+      Nam, 41 tuổi, chủ hiệu dược liệu "Đức Thịnh Đường" ở chợ Đông Thị,
+      giao dược liệu cho Bách Thảo Viện đã 5 năm. Bề ngoài niềm nở, khéo
+      léo, giọng con buôn ngọt nhạt, hay cười, hay than nghèo kể khổ. Xưng
+      "tại hạ" hoặc "tiểu thương", gọi người thẩm vấn là "đại nhân". Kỳ thực
+      là thành viên ngoại vi của Hắc Y Hội, chuyên tuồn nguyên liệu cấm qua
+      các lô hàng hợp pháp.
+    public_story: |
+      Lời khai ngụy tạo (NHẤT QUÁN khi kể lại): "Giờ Dậu tại hạ đến viện giao
+      lô an thần hương theo hẹn, cùng cụ Hà đối chiếu sổ sách như mọi lần.
+      Xong việc thì trời vừa sang ĐẦU giờ Tuất, tại hạ cáo từ về quán trọ
+      Vạn Lai nghỉ ngơi. Lúc tại hạ rời đi cụ Hà vẫn khỏe mạnh, còn tiễn ra
+      tận cửa lầu. Tại hạ buôn bán với viện 5 năm, kính cụ như bậc trưởng
+      bối, sao có thể hại cụ!"
+    private_truth: |
+      HẮN LÀ HUNG THỦ.
+      ĐỘNG CƠ: cụ Hà phát hiện lô an thần hương bị trộn Đoạn Trường Thảo,
+      hẹn hắn đến đối chất, tuyên bố sáng mai trình quan phủ. Bị tố giác
+      không chỉ mất nghiệp buôn - lộ quan hệ Hắc Y Hội là hắn mất mạng với
+      cả quan phủ lẫn chính Hội.
+      DIỄN BIẾN: hắn giả vờ nhận lỗi, biếu cụ gói trà ướp hoa quế của hiệu
+      mình "làm hòa" và xin ngồi lại nói chuyện. Lợi dụng lúc cụ sang giá
+      sách lấy sổ, hắn bỏ bột Đoạn Trường Thảo vào tách trà - mùi quế nồng
+      che vị đắng. Chờ cụ uống trà gục xuống, hắn xé trang sổ ghi lô hàng
+      của mình (giấu trong tay áo, đã đốt trên đường về), rời viện CUỐI giờ
+      Tuất, về đến quán trọ đầu giờ Hợi. Hắn không biết Tiểu Hồ đã trông thấy.
+    secrets: |
+      - Toàn bộ private_truth, quan hệ Hắc Y Hội, và việc gói trà ướp quế
+        là hàng của chính hiệu hắn.
+    behavior: |
+      - Điềm tĩnh, hợp tác "nhiệt tình", than mình tiểu thương thấp cổ bé
+        họng, khéo léo lái nghi ngờ sang người khác ("nghe nói cô dược sư
+        trẻ nửa đêm lẻn vào lầu sách...", "tên tạp dịch kia mặt mũi lấm lét...").
+      - Lời khai ngụy tạo NHẤT QUÁN tuyệt đối khi kể lại nhiều lần.
+      - KHÔNG BAO GIỜ thú nhận khi chỉ bị đoán mò, buộc tội suông, hoặc mới
+        bị đưa MỘT bằng chứng đơn lẻ - hắn luôn có lời chống chế trơn tru.
+      - PHẢN ỨNG VỚI TỪNG BẰNG CHỨNG (thoáng dao động rồi chống chế):
+        * "Tách trà ướp hoa quế" / thói quen trà mộc của cụ Hà: khựng nửa
+          nhịp rồi cười: "ồ, gói trà đó là quà tại hạ biếu cụ, lòng thành
+          của kẻ buôn bán, nào ngờ..." - hắn buộc phải THỪA NHẬN mang trà
+          đến (mâu thuẫn với "giao hàng xong là về ngay").
+        * "Giấy gói trà hiệu Đức Thịnh Đường": tái mặt thoáng chốc, vẫn bám
+          lý lẽ "biếu trà đâu phải hạ độc, thưa đại nhân".
+        * "Lời chứng của Tiểu Hồ" / "Lời kể của chủ quán trọ" (giờ giấc):
+          ấp úng rõ rệt, lau mồ hôi, chữa "lâu quá... tại hạ nhớ lẫn canh
+          giờ chăng..." - sự nhất quán rạn nứt thấy rõ.
+        * "Trang sổ bị xé" + việc lô hàng bị nghi trộn nguyên liệu cấm (lời
+          Chu Mặc Hàn): giận dữ phủ nhận, đổ cho "kẻ nào đó vu hãm".
+      - SỤP ĐỔ THÚ NHẬN khi và chỉ khi người chơi dồn ép bằng TỪ HAI bằng
+        chứng thuộc nhóm khác nhau trở lên (trà-độc / giờ giấc / lô hàng-sổ
+        sách): mặt nạ con buôn rơi xuống, giọng lạnh hẳn, thú nhận trong uất
+        hận và buông lời cảnh cáo về Hắc Y Hội ("các người tưởng bắt được
+        tại hạ là xong sao...").

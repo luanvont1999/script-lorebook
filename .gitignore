@@ -1,0 +1,13 @@
+# Bí mật - tuyệt đối không đưa lên git
+.env
+
+# Môi trường ảo Python
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

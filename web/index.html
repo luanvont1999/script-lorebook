@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Án mạng ở Tàng Thư Lâu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="brand-seal">án</span>
+      <div>
+        <h1 id="case-title">Đang tải vụ án...</h1>
+        <p class="subtitle">Thẩm vấn nghi phạm &middot; Đối chiếu lời khai &middot; Tìm hung thủ</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn ghost" id="btn-scene">Hồ sơ hiện trường</button>
+      <button class="btn ghost notebook-toggle" id="btn-notebook">Sổ tay</button>
+      <button class="btn danger" id="btn-accuse">Buộc tội</button>
+      <button class="btn ghost" id="btn-reset" title="Chơi lại từ đầu">Chơi lại</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <h2 class="aside-title">Nghi phạm</h2>
+      <div id="suspect-list"></div>
+      <div class="aside-hint">
+        Mỗi nghi phạm được thẩm vấn riêng - họ không biết người khác đã khai gì.
+        Bạn chỉ có <strong>một lần buộc tội</strong>.
+      </div>
+    </aside>
+
+    <main>
+      <div id="gameover-banner" class="gameover-banner hidden"></div>
+      <div id="chat" class="chat"></div>
+      <form id="composer" class="composer">
+        <input id="msg-input" type="text" autocomplete="off"
+               placeholder="Chọn một nghi phạm để bắt đầu thẩm vấn..." disabled />
+        <button class="btn primary" id="btn-send" type="submit" disabled>Hỏi</button>
+      </form>
+    </main>
+
+    <aside class="notebook" id="notebook">
+      <h2 class="aside-title">Sổ tay điều tra</h2>
+      <div class="notebook-section">
+        <h3 class="notebook-subtitle">Khám xét</h3>
+        <div id="location-list" class="location-list"></div>
+      </div>
+      <div class="notebook-section">
+        <h3 class="notebook-subtitle">Manh mối (<span id="clue-count">0</span>)</h3>
+        <div id="clue-list" class="clue-list">
+          <p class="clue-empty">Chưa có manh mối nào. Hãy khám xét hiện trường
+          và moi lời khai từ các nghi phạm.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div id="toasts" class="toasts"></div>
+
+  <!-- Modal: hiện trường -->
+  <dialog id="modal-scene">
+    <div class="modal-head">
+      <h2>Hồ sơ hiện trường</h2>
+      <button class="modal-close" data-close>&times;</button>
+    </div>
+    <pre id="scene-text" class="scene-text"></pre>
+    <div class="modal-foot">
+      <button class="btn primary" data-close>Bắt đầu điều tra</button>
+    </div>
+  </dialog>
+
+  <!-- Modal: khám xét -->
+  <dialog id="modal-examine">
+    <div class="modal-head">
+      <h2 id="examine-title"></h2>
+      <button class="modal-close" data-close>&times;</button>
+    </div>
+    <pre id="examine-narrative" class="scene-text"></pre>
+    <div id="examine-found"></div>
+    <div class="modal-foot">
+      <button class="btn primary" data-close>Đóng</button>
+    </div>
+  </dialog>
+
+  <!-- Modal: buộc tội -->
+  <dialog id="modal-accuse">
+    <div class="modal-head">
+      <h2>Buộc tội hung thủ</h2>
+      <button class="modal-close" data-close>&times;</button>
+    </div>
+    <p class="accuse-warning">
+      Bạn chỉ có <strong>một lần</strong> buộc tội. Sau khi quyết định,
+      toàn bộ sự thật sẽ được phơi bày - dù đúng hay sai.
+    </p>
+    <div id="accuse-list" class="accuse-list"></div>
+    <div class="modal-foot">
+      <button class="btn ghost" data-close>Suy nghĩ thêm</button>
+      <button class="btn danger" id="btn-confirm-accuse" disabled>Khẳng định hung thủ</button>
+    </div>
+  </dialog>
+
+  <!-- Modal: kết quả -->
+  <dialog id="modal-result">
+    <div class="modal-head">
+      <h2 id="result-verdict"></h2>
+    </div>
+    <p id="result-summary" class="result-summary"></p>
+    <h3 class="truth-title">Sự thật vụ án</h3>
+    <pre id="result-truth" class="scene-text"></pre>
+    <div class="modal-foot">
+      <button class="btn ghost" data-close>Xem lại hội thoại</button>
+      <button class="btn primary" id="btn-replay">Chơi lại từ đầu</button>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
