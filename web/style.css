@@ -101,6 +101,20 @@ h1 {
 
 .btn.ghost { background: transparent; }
 
+.scenario-select {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--gold);
+  background: var(--panel);
+  color: var(--gold-soft);
+  cursor: pointer;
+  max-width: 240px;
+}
+.scenario-select:hover { background: var(--panel-2); }
+
 /* ===== Layout ===== */
 .layout {
   flex: 1;

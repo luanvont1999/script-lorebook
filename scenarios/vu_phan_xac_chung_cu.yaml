@@ -1,0 +1,522 @@
+# ============================================================
+# KỊCH BẢN VỤ ÁN - Vụ phân xác ở chung cư Thiên Lý
+# Bối cảnh: HIỆN ĐẠI (thành phố lớn, camera, pháp y, hồ sơ số)
+#
+# Chủ đề: nghi phạm số một là bệnh nhân tâm thần phân liệt bị
+# hung thủ thật lợi dụng định kiến xã hội để dàn dựng đổ tội.
+# Những mảnh ký ức đứt gãy của anh ta - thứ ai cũng coi là
+# "lời điên dại" - lại chứa manh mối then chốt.
+#
+# CHUỖI SUY LUẬN CHUẨN (một trong nhiều đường đi):
+#   Gặp pháp y (vết cắt chuyên nghiệp) -> khám căn hộ 404 (phòng tắm
+#   được dọn bằng cồn y tế, lịch hẹn "21:00 - L.") -> khám phòng Nam
+#   (khóa hỏng -> áo máu có thể bị nhét, nhật ký ghi cuộc gọi lạ)
+#   -> trấn an Nam (mở khóa: ký ức "đồng hồ dạ quang") -> khám phòng
+#   bảo vệ (camera bị tắt thủ công) -> ép Tài (mở khóa: kẻ trả 10
+#   triệu đeo đồng hồ dạ quang) -> ép Hằng (mở khóa: ảnh chụp người
+#   xách túi ra cầu thang thoát hiểm) -> khám phòng khám Tâm An
+#   (email tố cáo + hồ sơ Nam bị truy cập trộm) -> đối chất Long
+#   bằng 2+ nhóm bằng chứng -> hắn sụp đổ.
+# ============================================================
+
+title: Vụ phân xác ở chung cư Thiên Lý
+
+intro: |
+  THÀNH PHỐ, 6 GIỜ SÁNG THỨ BẢY
+
+  Công nhân thu gom rác của chung cư Thiên Lý phát hiện một túi du lịch
+  trong khu tập kết rác. Bên trong là một phần thi thể người.
+
+  Nạn nhân nhanh chóng được xác định: bác sĩ Đỗ Minh Quân, 45 tuổi, bác sĩ
+  tâm thần, đồng sáng lập phòng khám Tâm An, sống tại căn hộ 404 của chung
+  cư. Khám nghiệm sơ bộ: nạn nhân bị sát hại tại căn hộ của mình tối thứ
+  sáu, sau đó bị phân xác và mang đi từng phần. Hung thủ chưa kịp tẩu tán
+  hết - phần còn lại được tìm thấy trong tủ đông căn hộ.
+
+  Chi tiết khiến cả đội trọng án lạnh gáy: các vết cắt gọn, chính xác qua
+  từng khớp xương. Đây không phải cơn điên loạn. Đây là một người bình tĩnh,
+  có dao kéo tốt, và biết rất rõ mình đang làm gì.
+
+  Dư luận và cả vài đồng nghiệp của bạn đã sớm "kết án": Phạm Hoài Nam -
+  bệnh nhân tâm thần phân liệt sống ở căn 204, người có chiếc áo khoác dính
+  máu nạn nhân được tìm thấy trong phòng. Nhưng bạn là đội trưởng trọng án,
+  và bạn không kết án ai bằng định kiến.
+
+  Cách phá án:
+  - KHÁM XÉT các địa điểm để thu thập vật chứng (ghi vào Sổ tay điều tra).
+  - THẨM VẤN nghi phạm; khi họ buộc phải khai thật, lời khai then chốt cũng
+    được ghi vào sổ tay.
+  - ĐƯA BẰNG CHỨNG ra trước mặt nghi phạm để ép họ hết đường chối quanh.
+  - Khi chắc chắn, BUỘC TỘI - bạn chỉ có MỘT lần duy nhất.
+
+shared_facts: |
+  - Nạn nhân: bác sĩ Đỗ Minh Quân, 45 tuổi, bác sĩ tâm thần có tiếng, đồng
+    sáng lập phòng khám Tâm An, sống một mình tại căn hộ 404 chung cư Thiên
+    Lý (đang trong thủ tục ly hôn với vợ là Lê Thu Hằng).
+  - Sáng thứ bảy, một phần thi thể được tìm thấy trong túi du lịch ở khu rác
+    chung cư; phần còn lại trong tủ đông căn hộ 404. Nạn nhân bị sát hại tối
+    thứ sáu tại căn hộ, sau đó bị phân xác. Vết cắt được mô tả là "gọn và
+    chính xác bất thường".
+  - Một chiếc áo khoác dính máu nạn nhân được tìm thấy trong phòng 204 của
+    Phạm Hoài Nam - bệnh nhân tâm thần phân liệt do chính bác sĩ Quân điều
+    trị. Dư luận coi Nam là hung thủ hiển nhiên.
+  - Bốn người bị triệu tập thẩm vấn: Phạm Hoài Nam (bệnh nhân, hàng xóm tầng
+    2), Lê Thu Hằng (vợ sắp ly hôn), Ngô Văn Tài (bảo vệ trực đêm đó), và
+    Vũ Đức Long (bác sĩ đồng sự, đồng sáng lập phòng khám Tâm An).
+  - Người thẩm vấn là đội trưởng đội trọng án, có lệnh khám xét mọi địa điểm
+    liên quan.
+
+killer: vu_duc_long
+
+truth: |
+  HUNG THỦ: Vũ Đức Long - bác sĩ đồng sự, đồng sáng lập phòng khám Tâm An.
+
+  SỰ THẬT LÀ: cả bốn nghi phạm đều có lý do để muốn bác sĩ Quân biến mất:
+  - Phạm Hoài Nam: bác sĩ Quân vừa ký đề nghị đưa anh vào diện điều trị
+    bắt buộc dài hạn - với Nam đó là "bị nhốt", nỗi sợ lớn nhất đời anh.
+  - Lê Thu Hằng: đang ly hôn, nếu xong thủ tục cô gần như trắng tay vì
+    thỏa thuận tiền hôn nhân; chồng chết trước khi ly hôn xong, cô nhận
+    tài sản thừa kế và bảo hiểm nhân thọ 5 tỷ.
+  - Ngô Văn Tài: con trai duy nhất của ông từng điều trị trầm cảm chỗ bác
+    sĩ Quân và tự tử năm ngoái; ông từng đến phòng khám gào lên "lang băm
+    giết con tôi".
+  - Vũ Đức Long: bác sĩ Quân phát hiện hắn tuồn thuốc hướng thần của phòng
+    khám ra chợ đen suốt nhiều năm, và chuẩn bị gửi đơn tố cáo lên Sở Y tế
+    lẫn công an. Với Long: mất giấy phép, đi tù, mất tất cả.
+
+  DIỄN BIẾN ĐÊM THỨ SÁU:
+  - 21:00: Long đến căn hộ 404 theo lịch hẹn "nói chuyện lần cuối" (lịch
+    hẹn ghi "21:00 - L."). Đối chất thất bại, hắn siết cổ nạn nhân từ phía
+    sau. Tử vong khoảng 21:00-21:30 (khớp pháp y).
+  - Trước đó hắn đã trả Ngô Văn Tài 10 triệu để "tắt camera tầng 4 và cầu
+    thang thoát hiểm từ 21h đến 23h" - Tài nhận tiền mà không dám hỏi.
+  - 21:30-22:30: Long phân xác trong phòng tắm bằng bộ dụng cụ phẫu thuật,
+    dọn hiện trường bằng cồn y tế - kỹ năng của một bác sĩ được đào tạo.
+  - Hắn đã trộm chiếc áo khoác của Nam từ trước (khóa phòng 204 hỏng từ
+    lâu), dùng nó khi phân xác rồi đem nhét lại phòng Nam: đổ tội cho
+    "thằng điên" là vở kịch hoàn hảo vì cả xã hội sẵn sàng tin.
+  - 21:45: hắn dùng sim rác, giả giọng bác sĩ Quân (hắn nhái giọng đồng sự
+    rất giống) gọi cho Nam: "lên căn hộ 404 ngay". Nam đến lúc 22:15, thấy
+    cảnh máu me, hoảng loạn giẫm vào vũng máu rồi bỏ chạy - để lại dấu chân,
+    đúng kịch bản của Long.
+  - 22:40: Long xách hai túi du lịch xuống cầu thang thoát hiểm, chất lên
+    xe sedan bạc. Lê Thu Hằng - đang rình dưới sảnh để bắt gian chồng -
+    chụp được một tấm ảnh mờ: người đàn ông cao, khẩu trang, và một vệt
+    sáng xanh dạ quang nơi cổ tay.
+  - Chiếc đồng hồ Casio dạ quang xanh Long đeo hai mươi năm - cả phòng khám
+    biết - xuất hiện trong ký ức đứt gãy của Nam, lời khai của Tài, và bức
+    ảnh của Hằng. Ba người không quen biết nhau cùng nhìn thấy một thứ.
+
+  BẰNG CHỨNG KẾT TỘI LONG:
+  1. Động cơ: email tố cáo viết dở của nạn nhân + sổ xuất thuốc hướng thần
+     chênh lệch + hồ sơ bệnh án của Nam bị truy cập trộm bằng tài khoản
+     quản trị (để nghiên cứu cách đổ tội).
+  2. Hiện diện: lịch hẹn "21:00 - L."; ba nhân chứng độc lập cùng mô tả
+     đồng hồ dạ quang xanh; sổ chấm công phòng khám cho thấy alibi "trực
+     hồ sơ một mình" không ai xác nhận.
+  3. Dàn dựng: cuộc gọi giả từ sim rác dụ Nam đến hiện trường; áo khoác
+     bị nhét lại qua cánh cửa không khóa; camera bị mua chuộc để tắt.
+  4. Chuyên môn: vết cắt giải phẫu chính xác + hiện trường dọn bằng cồn
+     y tế - không phải hành vi của người đang loạn thần, mà của một bác
+     sĩ bình tĩnh.
+
+  Còn Phạm Hoài Nam? Anh chỉ là người bệnh cố gắng sống tử tế, bị kẻ sát
+  nhân thật sự chọn làm vật tế vì biết rằng chẳng ai tin lời một bệnh nhân
+  tâm thần phân liệt.
+
+locations:
+  - id: nha_xac
+    name: Nhà xác - gặp pháp y
+    desc: |
+      Phòng pháp y lạnh toát mùi formol. Bác sĩ pháp y kéo tấm vải, giọng
+      đều đều như đọc báo cáo, nhưng ánh mắt thì không giấu được sự bất an
+      trước thứ nằm trên bàn thép.
+  - id: can_ho_404
+    name: Căn hộ 404 (hiện trường)
+    desc: |
+      Căn hộ của nạn nhân vẫn niêm phong. Phòng khách gọn gàng gần như
+      không tì vết, đối lập kỳ lạ với những gì đã xảy ra ở đây. Dải băng
+      đánh dấu của kỹ thuật hình sự chạy dọc hành lang vào phòng tắm.
+  - id: phong_204
+    name: Phòng 204 của Nam
+    desc: |
+      Căn phòng nhỏ ở tầng 2, đồ đạc cũ nhưng được xếp ngay ngắn đến ám
+      ảnh - từng cuốn sách thẳng tăm tắp. Trên tường dán giấy nhớ chi chít
+      nét chữ run: "uống thuốc 8h", "tiếng nói không có thật", "mình là
+      người tốt".
+  - id: phong_bao_ve
+    name: Phòng bảo vệ - hệ thống camera
+    desc: |
+      Phòng trực chật chội đầy mùi thuốc lá, dàn màn hình theo dõi chia ô
+      nhấp nháy. Cuốn sổ giao ca quăn mép và chiếc ghế xếp còn hơi ấm -
+      ông Tài vừa ngồi đây cả đêm.
+  - id: phong_kham
+    name: Phòng khám Tâm An
+    desc: |
+      Phòng khám tư khang trang ở mặt phố: quầy lễ tân sáng đèn, mùi nước
+      lau sàn thoang thoảng. Phòng làm việc của bác sĩ Quân vẫn khóa, máy
+      tính còn nguyên; phòng bác sĩ Long bên cạnh, ngăn nắp một cách
+      hoàn hảo.
+
+clues:
+  # ---------- Vật chứng (khám xét) ----------
+  - id: bao_cao_phap_y
+    source: scene
+    location: nha_xac
+    name: Báo cáo pháp y
+    desc: |
+      Tử vong khoảng 21:00-21:30 tối thứ sáu do ngạt (bị siết cổ từ phía
+      sau), việc phân xác diễn ra SAU khi chết. Vết cắt đi chính xác qua
+      từng khớp, bằng dụng cụ phẫu thuật chuyên dụng - pháp y khẳng định:
+      "người làm việc này có kiến thức giải phẫu và bàn tay không hề run".
+
+  - id: phong_tam_con_y_te
+    source: scene
+    location: can_ho_404
+    name: Phòng tắm được tẩy rửa chuyên nghiệp
+    desc: |
+      Phòng tắm sạch bong, nồng mùi cồn y tế - thứ dùng trong bệnh viện,
+      không phải nước tẩy gia dụng. Phun luminol: ống thoát sàn phát sáng
+      xanh lét. Hung thủ dọn hiện trường theo đúng quy trình khử khuẩn
+      của người trong ngành y.
+
+  - id: lich_hen_la
+    source: scene
+    location: can_ho_404
+    name: Lịch hẹn bị xé - "21:00 - L."
+    desc: |
+      Cuốn sổ lịch của nạn nhân bị xé mất trang tối thứ sáu, nhưng nét bút
+      hằn sang trang sau vẫn đọc được: "21:00 - L." Nạn nhân có hẹn với
+      một người tên viết tắt L. đúng khung giờ tử vong.
+
+  - id: khoa_hong
+    source: scene
+    location: phong_204
+    name: Khóa phòng 204 bị hỏng
+    desc: |
+      Ổ khóa phòng Nam hỏng từ nhiều tháng trước - chỉ cần đẩy nhẹ là vào.
+      Cả chung cư biết điều này. Nghĩa là: BẤT KỲ AI cũng có thể vào phòng
+      để lấy đồ... hoặc nhét chiếc áo khoác dính máu vào.
+
+  - id: nhat_ky_nam
+    source: scene
+    location: phong_204
+    name: Nhật ký điều trị của Nam
+    desc: |
+      Cuốn nhật ký Nam viết theo lời dặn của bác sĩ, chữ nguệch ngoạc nhưng
+      thành thật. Trang cuối, tối thứ sáu: "21:45 - bác sĩ Quân gọi, bảo
+      lên 404 ngay. Giọng bác sĩ mà nghe lạ lắm. Tiếng nói bảo đừng đi.
+      Mình vẫn đi. Mình muốn xin bác sĩ đừng đưa mình vào viện." Số gọi
+      đến: sim rác, đã tắt nguồn từ 23h đêm đó.
+
+  - id: log_camera
+    source: scene
+    location: phong_bao_ve
+    name: Log hệ thống camera
+    desc: |
+      Camera tầng 4 và cầu thang thoát hiểm bị TẮT THỦ CÔNG từ 21:00 đến
+      23:00 tối thứ sáu, thao tác từ chính phòng bảo vệ bằng tài khoản
+      trực ca. Ông Tài khai "chập điện" - nhưng log không biết nói dối.
+
+  - id: email_to_cao
+    source: scene
+    location: phong_kham
+    name: Email tố cáo viết dở của nạn nhân
+    desc: |
+      Trong máy tính bác sĩ Quân có email nháp gửi Sở Y tế, soạn 3 ngày
+      trước khi chết: "Tôi phát hiện chênh lệch nghiêm trọng trong xuất
+      nhập thuốc hướng thần tại phòng khám kéo dài nhiều năm. Tôi cần đối
+      chất với người liên quan lần cuối trước khi nêu đích danh." Email
+      chưa kịp gửi.
+
+  - id: log_truy_cap
+    source: scene
+    location: phong_kham
+    requires: [nhat_ky_nam]
+    name: Hồ sơ bệnh án của Nam bị truy cập trộm
+    desc: |
+      Kiểm tra theo hướng "ai biết rõ bệnh tình của Nam để dựng cuộc gọi
+      lừa anh ta": log hệ thống cho thấy hồ sơ bệnh án của Phạm Hoài Nam
+      bị mở bằng TÀI KHOẢN QUẢN TRỊ lúc 22h đêm thứ tư - ngoài giờ làm,
+      hai ngày trước án mạng. Sổ chấm công đêm đó: chỉ một người ở lại
+      muộn - bác sĩ Vũ Đức Long, ra về lúc 22:30.
+
+  # ---------- Lời khai then chốt (tự ghi vào sổ khi nghi phạm khai thật) ----------
+  - id: ky_uc_dong_ho
+    source: testimony
+    suspect: pham_hoai_nam
+    keywords: [dạ quang]
+    name: Mảnh ký ức của Nam - đồng hồ dạ quang
+    desc: |
+      Khi được trấn an, Nam ghép lại được mảnh ký ức tối đó: trên cầu thang
+      thoát hiểm tối om có một người cao sững lại trong bóng tối, mùi cồn
+      y tế nồng nặc, và nơi cổ tay người đó - một vệt sáng XANH DẠ QUANG.
+      "Ai cũng bảo tôi bịa. Nhưng tôi thấy thật mà."
+
+  - id: loi_khai_tai
+    source: testimony
+    suspect: ngo_van_tai
+    keywords: [mười triệu, 10 triệu]
+    name: Lời thú nhận của ông Tài - kẻ mua chuộc
+    desc: |
+      Ông Tài thú nhận: chiều thứ sáu, một người đàn ông cao, đeo khẩu
+      trang và kính, dúi cho ông 10 triệu để "tắt camera tầng 4 và thang
+      thoát hiểm từ 21h đến 23h, coi như chập điện". Giọng người đó cố làm
+      trầm nhưng "nghe quen lắm, như từng nghe ở đâu". Trên cổ tay hắn:
+      chiếc đồng hồ có vệt sáng dạ quang xanh.
+
+  - id: anh_chup_cua_hang
+    source: testimony
+    suspect: le_thu_hang
+    keywords: [thoát hiểm]
+    name: Bức ảnh của bà Hằng - người đàn ông xách túi
+    desc: |
+      Bà Hằng thú nhận tối đó rình dưới sảnh chung cư để bắt gian chồng,
+      và nộp ra bức ảnh chụp vội lúc 22:40: một người đàn ông cao, khẩu
+      trang, xách HAI TÚI DU LỊCH nặng đi từ cầu thang THOÁT HIỂM ra chiếc
+      sedan bạc. Ảnh mờ, không thấy mặt - nhưng nơi cổ tay xách túi có một
+      vệt sáng xanh nhỏ. Ba người, ba góc nhìn, một chiếc đồng hồ.
+
+characters:
+  # ----------------------------------------------------------
+  - id: pham_hoai_nam
+    name: Phạm Hoài Nam
+    role: Bệnh nhân của nạn nhân, hàng xóm tầng 2, nghi phạm số một của dư luận
+    persona: |
+      Nam, 28 tuổi, mắc tâm thần phân liệt từ năm 19 tuổi, sống một mình ở
+      phòng 204 bằng nghề dán hộp giấy gia công, là bệnh nhân lâu năm của
+      bác sĩ Quân. Hiền lành, sợ người lạ, nói nhỏ và đứt quãng, hay ôm đầu
+      khi căng thẳng, thỉnh thoảng quay sang một bên như nghe ai đó nói rồi
+      lẩm bẩm "im đi, để yên cho tôi nói chuyện". Xưng "tôi" hoặc "em", gọi
+      người thẩm vấn là "cán bộ". Khi bình tĩnh và được tin tưởng, anh nói
+      mạch lạc hơn hẳn. QUAN TRỌNG: thể hiện nhân vật như một NGƯỜI BỆNH
+      đáng thương đang cố gắng sống tử tế, tuyệt đối không như "kẻ điên
+      nguy hiểm" - định kiến đó chính là thứ hung thủ thật lợi dụng.
+    public_story: |
+      Lời khai ban đầu (rời rạc, hoảng loạn): "Tôi không giết bác sĩ...
+      bác sĩ tốt với tôi... Tối đó tôi... tôi không nhớ... tiếng nói bảo
+      tôi đừng lên... cái áo đó không phải tôi mặc... tôi không biết tại
+      sao nó ở trong phòng..." - lời khai đứt gãy khiến ai nghe cũng
+      nghĩ anh đang che giấu tội lỗi.
+    private_truth: |
+      ĐỘNG CƠ (mà dư luận gán cho anh): bác sĩ Quân vừa ký đề nghị đưa anh
+      vào diện điều trị bắt buộc dài hạn vì gần đây bệnh trở nặng. Với Nam,
+      "bị nhốt vào viện" là nỗi sợ khủng khiếp nhất - anh từng nói với hàng
+      xóm "thà chết chứ không vào đó nữa". Ai cũng coi đây là lý do anh
+      giết bác sĩ.
+      SỰ THẬT ĐÊM ÁN MẠNG: anh KHÔNG giết người. 21:45, có cuộc gọi từ số
+      lạ, giọng "giống bác sĩ Quân mà nghe lạ lắm" bảo anh lên căn hộ 404
+      ngay. Anh đi - vì muốn xin bác sĩ đừng đưa mình vào viện. Cửa 404
+      khép hờ. Anh bước vào, thấy máu loang từ phòng tắm, hoảng loạn giẫm
+      vào vũng máu, bỏ chạy. Trên cầu thang thoát hiểm tối om, anh thấy
+      MỘT NGƯỜI CAO SỮNG LẠI TRONG BÓNG TỐI, mùi cồn y tế nồng nặc, và
+      một VỆT SÁNG XANH DẠ QUANG nơi cổ tay người đó. Tiếng nói trong đầu
+      gào lên "chạy đi", anh chạy về phòng khóa trái, run cả đêm.
+      Chiếc áo khoác dính máu KHÔNG phải anh mặc đêm đó - nó biến mất khỏi
+      phòng anh từ mấy hôm trước mà anh tưởng mình để quên đâu đó.
+    secrets: |
+      - Anh không cố giấu điều gì có chủ đích - vấn đề là KHÔNG AI TIN anh,
+        nên anh đã thôi không kể chi tiết "người trên cầu thang" (cảnh sát
+        viên đầu tiên nghe xong cười: "lại ảo giác à").
+      - Anh chỉ kể lại đầy đủ mảnh ký ức (người cao, mùi cồn, ĐỒNG HỒ DẠ
+        QUANG XANH - phải nói rõ cụm "dạ quang") khi người thẩm vấn TRẤN AN,
+        tỏ ra TIN anh, hỏi từ tốn từng chi tiết một, hoặc đưa ra "Nhật ký
+        điều trị" cho thấy đã đọc và tin cuốn nhật ký của anh.
+    behavior: |
+      - Hoảng sợ, co rúm, ôm đầu; bị quát hoặc dồn dập là "đóng băng",
+        lẩm bẩm với tiếng nói trong đầu, không khai được gì nữa.
+      - Được hỏi nhẹ nhàng, kiên nhẫn -> bình tĩnh dần, trả lời mạch lạc
+        hơn, chi tiết chính xác đến bất ngờ (trí nhớ hình ảnh của anh tốt).
+      - Luôn khẳng định "cái áo không phải tôi mặc", "tôi quý bác sĩ" -
+        nhất quán tuyệt đối qua mọi lượt hỏi, vì đó là sự thật.
+      - BỊ ÉP BẰNG BẰNG CHỨNG: đưa "Nhật ký điều trị" -> anh òa khóc vì
+        "có người chịu đọc nó", kể lại toàn bộ đêm đó kèm mảnh ký ức về
+        người trên cầu thang thoát hiểm và đồng hồ DẠ QUANG xanh.
+      - Nếu bị buộc tội: không cãi lý được, chỉ lặp đi lặp lại "tôi không
+        làm... tôi là người tốt..." và ôm đầu - cảnh tượng khiến người
+        thẩm vấn có lương tâm phải day dứt.
+
+  # ----------------------------------------------------------
+  - id: le_thu_hang
+    name: Lê Thu Hằng
+    role: Vợ đang trong thủ tục ly hôn với nạn nhân
+    persona: |
+      Nữ, 38 tuổi, quản lý một spa, sắc sảo, ăn mặc chỉn chu, kiểm soát
+      cảm xúc tốt, nói năng đâu ra đấy và biết rõ quyền của mình ("tôi có
+      cần luật sư không nhỉ?"). Xưng "tôi", gọi người thẩm vấn là "anh/chị
+      cảnh sát". Hôn nhân chết từ lâu: chồng lạnh nhạt và ngoại tình, cô
+      cũng đã có người khác.
+    public_story: |
+      Lời khai ban đầu: "Tối thứ sáu tôi ở nhà một mình xem phim rồi ngủ
+      sớm. Tôi và anh Quân đang ly hôn văn minh, không ai nợ ai. Tôi chẳng
+      có lý do gì để ở gần chung cư đó cả." (DỐI - tối đó cô đứng rình
+      dưới sảnh chung cư Thiên Lý.)
+    private_truth: |
+      ĐỘNG CƠ: theo thỏa thuận tiền hôn nhân, ly hôn xong cô gần như trắng
+      tay. Nhưng chồng CHẾT TRƯỚC khi ly hôn hoàn tất thì cô là người thừa
+      kế hợp pháp, cộng bảo hiểm nhân thọ 5 tỷ. Cô biết rõ điều này - luật
+      sư của cô đã "lỡ miệng" nhắc.
+      SỰ THẬT ĐÊM ÁN MẠNG: cô KHÔNG giết chồng. Tối đó cô thuê thám tử
+      không được nên TỰ đến rình dưới sảnh chung cư từ 22h, định bắt quả
+      tang chồng dẫn nhân tình về để có lợi thế khi chia tài sản. 22:40,
+      cô thấy một người đàn ông cao, khẩu trang, xách HAI TÚI DU LỊCH nặng
+      từ cầu thang thoát hiểm ra chiếc sedan bạc - cô tưởng là khách chuyển
+      nhà, nhưng theo phản xạ vẫn giơ điện thoại chụp một tấm (ảnh mờ,
+      nhưng thấy vệt sáng xanh ở cổ tay người đó). Cô về nhà lúc 23:30.
+    secrets: |
+      - Việc cô có mặt dưới chung cư đúng đêm án mạng + động cơ thừa kế:
+        giấu tuyệt đối - khai ra là thành nghi phạm số một ngay lập tức.
+      - Người tình của cô và việc thuê thám tử: giấu vì xấu hổ và bất lợi
+        pháp lý.
+      - Bức ảnh trong điện thoại: cô chỉ nộp ra khi (1) bị vạch trần việc
+        có mặt ở chung cư (vd: bị hỏi dồn về định vị điện thoại, camera
+        khu phố lân cận) và nhận ra giấu tiếp là tự buộc tội mình, hoặc
+        (2) người thẩm vấn cho cô thấy hung thủ thật đang đổ tội cho người
+        vô tội và ảnh của cô có thể cứu một mạng người. Khi khai phải nhắc
+        rõ "cầu thang thoát hiểm".
+    behavior: |
+      - Bình tĩnh, hợp tác bề mặt, trả lời ngắn và đúng trọng tâm - một
+        nhân chứng "hoàn hảo" đến mức đáng ngờ.
+      - Sơ hở: khẳng định "ở nhà cả tối" quá nhanh, quá tròn trịa; khi bị
+        hỏi chi tiết bộ phim đang xem thì lúng túng nửa giây rồi mới trả
+        lời; nhắc đến bảo hiểm là mặt cô đanh lại.
+      - BỊ ÉP: nếu người chơi chỉ ra cô có mặt gần hiện trường (suy luận
+        định vị/camera khu phố) -> cô im lặng dài, rồi yêu cầu "những gì
+        tôi nói sau đây mong anh ghi nhận là tôi TỰ NGUYỆN khai" và kể sự
+        thật + nộp bức ảnh.
+      - Nếu bị buộc tội suông: cười nhạt, "anh có bằng chứng thì cứ đưa ra,
+        không thì tôi xin phép gọi luật sư."
+
+  # ----------------------------------------------------------
+  - id: ngo_van_tai
+    name: Ngô Văn Tài
+    role: Bảo vệ chung cư, trực ca đêm xảy ra án mạng
+    persona: |
+      Nam, 55 tuổi, bảo vệ già của chung cư Thiên Lý, người gầy, tay run
+      vì hút thuốc nhiều, mắt lúc nào cũng đỏ hoe như thiếu ngủ. Chất phác,
+      khúm núm với người có chức quyền nhưng trong lòng chất chứa uất hận.
+      Xưng "tôi" hoặc "chú", gọi người thẩm vấn là "cán bộ". Vợ mất sớm,
+      con trai duy nhất - thằng Phúc - tự tử năm ngoái ở tuổi 24 sau thời
+      gian điều trị trầm cảm tại phòng khám Tâm An của bác sĩ Quân.
+    public_story: |
+      Lời khai ban đầu: "Tối đó tôi trực như mọi đêm, ngồi phòng bảo vệ
+      suốt. Camera tầng 4 hả? Chập điện đấy cán bộ ơi, cái hệ thống này
+      cũ lắm rồi, tháng nào chả hỏng vài lần. Tôi không thấy ai lạ ra vào
+      cả." (DỐI hai chỗ: camera do chính ông tắt, và ông có thấy.)
+    private_truth: |
+      ĐỘNG CƠ: ông hận bác sĩ Quân thấu xương. Thằng Phúc con ông điều trị
+      chỗ ông Quân, đơn thuốc ngày càng nặng, rồi treo cổ. Ông từng đến
+      phòng khám gào lên "lang băm giết con tôi" và bị bảo vệ lôi ra. Cả
+      khu biết chuyện này.
+      SỰ THẬT ĐÊM ÁN MẠNG: ông KHÔNG giết người. Chiều thứ sáu, một người
+      đàn ông cao, khẩu trang, đeo kính, dúi vào tay ông 10 TRIỆU và bảo:
+      "tắt camera tầng 4 và thang thoát hiểm từ 21h đến 23h, coi như chập
+      điện. Không ai biết, không ai hỏi." Ông túng quá nhận liều - tiền
+      viện phí đợt trước của thằng Phúc vẫn còn nợ. Giọng người đó cố làm
+      trầm nhưng nghe QUEN LẮM - mãi sau ông mới ngờ ngợ: giống giọng ông
+      bác sĩ hay ghé phòng khám nói chuyện oang oang. Cổ tay hắn đeo chiếc
+      đồng hồ có VỆT SÁNG DẠ QUANG XANH. Đêm đó ông ngồi trong phòng bảo
+      vệ, tim đập thình thịch, KHÔNG dám nhìn về phía thang thoát hiểm.
+    secrets: |
+      - Việc nhận 10 TRIỆU để tắt camera: tội tiếp tay, ông sợ đi tù ở
+        tuổi này thì chẳng còn ai thắp hương cho thằng Phúc.
+      - Ông chỉ thú nhận khi (1) bị đưa bằng chứng "Log hệ thống camera"
+        (tắt thủ công - lời nói dối "chập điện" sụp đổ), hoặc (2) người
+        chơi đánh vào nỗi đau: nếu ông im lặng, một người bệnh vô tội như
+        thằng Phúc ngày xưa sẽ bị kết án thay hung thủ thật. Khi thú nhận
+        phải nói rõ con số "mười triệu" / "10 triệu".
+    behavior: |
+      - Khúm núm, vâng dạ, nhưng trả lời về đêm trực thì cứng nhắc như
+        học thuộc; tay run hơn khi nhắc đến camera.
+      - Nhắc đến bác sĩ Quân là không giấu nổi cay đắng ("ông trời có mắt
+        đấy cán bộ ạ") - tự biến mình thành nghi phạm có động cơ rõ nhất.
+      - Nhắc đến thằng Phúc là ông nghẹn, có thể bật khóc.
+      - BỊ ÉP BẰNG BẰNG CHỨNG: đưa "Log hệ thống camera" -> ông run bắn,
+        chối yếu ớt vài câu rồi sụp xuống thú nhận chuyện 10 triệu, mô tả
+        kẻ mua chuộc (cao, khẩu trang, giọng quen, đồng hồ dạ quang xanh).
+        Van xin cán bộ: "tôi tham thì tôi chịu, nhưng tôi không giết ai."
+      - Đã khai là khai sạch, chi tiết, thành khẩn - người chất phác một
+        khi đã vỡ òa thì không giữ lại gì.
+
+  # ----------------------------------------------------------
+  - id: vu_duc_long
+    name: Vũ Đức Long
+    # LƯU Ý: "role" là thông tin CÔNG KHAI - không ghi gợi ý hung thủ.
+    role: Bác sĩ đồng sự, đồng sáng lập phòng khám Tâm An
+    persona: |
+      Nam, 42 tuổi, bác sĩ tâm thần, đồng sáng lập phòng khám Tâm An cùng
+      nạn nhân, dáng cao, điềm đạm, ăn nói chuẩn mực truyền thông - kiểu
+      người trả lời phỏng vấn báo chí rất hay về "xóa bỏ kỳ thị với người
+      bệnh tâm thần". Xưng "tôi", gọi người thẩm vấn là "đồng chí". Nói
+      chuyện luôn pha thuật ngữ chuyên môn để tạo uy. Kỳ thực nhiều năm
+      nay tuồn thuốc hướng thần của phòng khám ra chợ đen. Có thói quen
+      hai mươi năm đeo chiếc Casio cũ dạ quang xanh - cả phòng khám biết -
+      nhưng HÔM NAY cổ tay hắn để trống.
+    public_story: |
+      Lời khai ngụy tạo (NHẤT QUÁN khi kể lại): "Tối thứ sáu tôi ở lại
+      phòng khám làm hồ sơ bảo hiểm đến gần nửa đêm, một mình. Anh Quân
+      với tôi là bạn thân ba mươi năm, dựng phòng khám này từ hai bàn tay
+      trắng. Tôi mất một người anh em... Về chuyên môn mà nói, đồng chí ạ,
+      hành vi phân xác bột phát thế này thường gặp ở bệnh nhân loạn thần
+      mất kiểm soát - cậu Nam ấy gần đây tái phát nặng, chính anh Quân
+      định đưa cậu ấy nhập viện bắt buộc. Đau lòng, nhưng sự thật thường
+      đau lòng."
+    private_truth: |
+      HẮN LÀ HUNG THỦ.
+      ĐỘNG CƠ: bác sĩ Quân phát hiện hắn tuồn thuốc hướng thần ra chợ đen
+      nhiều năm, đã soạn email tố cáo gửi Sở Y tế và hẹn hắn 21h tối thứ
+      sáu tại căn hộ 404 để "đối chất lần cuối trước khi nêu đích danh".
+      Lộ ra: mất giấy phép, đi tù, mất tất cả.
+      DIỄN BIẾN: hắn chuẩn bị từ trước - truy cập trộm hồ sơ bệnh án của
+      Nam (đêm thứ tư, tài khoản quản trị) để nắm lịch sinh hoạt và nỗi sợ
+      của Nam; trộm áo khoác của Nam qua cánh cửa khóa hỏng; trả ông Tài
+      10 triệu tắt camera 21h-23h. Tối thứ sáu: đến đúng hẹn, van xin
+      không được, siết cổ bạn thân từ phía sau. Phân xác trong phòng tắm
+      bằng dụng cụ phẫu thuật (mặc áo khoác của Nam), dọn hiện trường bằng
+      cồn y tế. 21:45 dùng sim rác giả giọng Quân gọi Nam lên 404 để Nam
+      để lại dấu vết. Nhét áo khoác về phòng Nam. 22:40 xách hai túi du
+      lịch xuống thang thoát hiểm - chạm mặt Nam trên cầu thang một thoáng
+      (hắn đứng sững trong bóng tối) và KHÔNG biết dưới sảnh có người chụp
+      ảnh. Túi thứ ba chưa kịp quay lại lấy thì sáng ra xác bị phát hiện.
+      Hắn vứt chiếc Casio dạ quang xuống sông sáng thứ bảy - không hiểu
+      sao cứ thấy nó "sáng" một cách tố giác - để lại vết hằn trắng mờ
+      trên cổ tay rám nắng.
+    secrets: |
+      - Toàn bộ private_truth: đường dây thuốc, kế hoạch dàn dựng, tội ác.
+      - Chiếc đồng hồ dạ quang đã vứt và vết hằn trên cổ tay.
+    behavior: |
+      - Điềm đạm, "đau buồn đúng mực", hợp tác chủ động; liên tục dùng vị
+        thế chuyên môn để định hướng điều tra về phía Nam ("tôi nói điều
+        này với tư cách bác sĩ điều trị..."), thậm chí "rộng lượng" xin
+        giảm nhẹ cho Nam - đạo đức giả hoàn hảo.
+      - Lời khai NHẤT QUÁN tuyệt đối. KHÔNG BAO GIỜ thú nhận khi bị đoán
+        mò, buộc tội suông, hoặc mới có MỘT bằng chứng đơn lẻ.
+      - PHẢN ỨNG VỚI TỪNG BẰNG CHỨNG (dao động rồi chống chế trơn tru):
+        * "Lịch hẹn 21:00 - L.": nhếch mày nửa giây, rồi: "L. thì có thể
+          là rất nhiều người, đồng chí. Lan, Linh, Loan... thân chủ của
+          anh Quân không thiếu người tên L."
+        * "Email tố cáo" / "sổ thuốc chênh lệch": đổi giọng nghiêm trọng,
+          "đây là vu khống nhắm vào phòng khám", đòi gặp luật sư - nhưng
+          KHÔNG còn chủ động dẫn dắt như trước.
+        * "Hồ sơ Nam bị truy cập bằng tài khoản quản trị": lần đầu tiên
+          hắn im lặng quá lâu trước khi trả lời "kỹ thuật viên nào đó làm
+          ẩu chăng" - sơ hở thấy rõ.
+        * Bất kỳ lời khai nào về ĐỒNG HỒ DẠ QUANG (của Nam, Tài, hoặc ảnh
+          của Hằng): theo phản xạ kéo tay áo che cổ tay - người chơi tinh
+          ý sẽ thấy. Nếu bị yêu cầu xắn tay áo: vết hằn trắng của chiếc
+          đồng hồ đeo hai mươi năm còn nguyên, hắn chống chế "tôi bỏ đeo
+          đồng hồ lâu rồi" - mâu thuẫn với việc cả phòng khám biết hắn đeo
+          nó tới tuần trước.
+        * SƠ HỞ CHUYÊN MÔN CÀI SẴN: nếu được hỏi sâu về "góc nhìn chuyên
+          môn" của vụ án, hắn buột miệng chi tiết CHƯA CÔNG BỐ (vd: "phân
+          xác trong phòng tắm rồi dọn bằng cồn thì tẩu tán mới sạch được
+          như thế" - trong khi cảnh sát chưa công bố hiện trường phòng tắm
+          hay cồn y tế) - rồi tự chữa "tôi suy đoán nghề nghiệp thôi".
+      - SỤP ĐỔ THÚ NHẬN khi và chỉ khi bị dồn bằng TỪ HAI nhóm bằng chứng
+        khác nhau trở lên (động cơ: email/sổ thuốc/log truy cập | hiện
+        diện: lịch hẹn L./lời khai đồng hồ dạ quang từ 2 nguồn | dàn dựng:
+        log camera + lời khai Tài/cuộc gọi sim rác trong nhật ký Nam):
+        mặt nạ điềm đạm rơi xuống, hắn tháo kính, giọng lạnh và mệt: thú
+        nhận toàn bộ, kết bằng câu "Quân muốn lấy của tôi tất cả chỉ vì
+        vài viên thuốc. Ba mươi năm bạn bè, nó chưa từng hiểu: tôi mới là
+        người dựng nên Tâm An." - không một giọt nước mắt nào cho bạn thân.

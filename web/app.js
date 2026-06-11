@@ -15,6 +15,8 @@ localStorage.setItem("mystery_sid", SID);
 const state = {
   title: "",
   intro: "",
+  scenarioId: null,
+  scenarios: [],   // [{id, title}]
   suspects: [],
   locations: [],   // [{id, name}]
   clues: [],       // manh mối đã tìm thấy [{id, name, desc, source}]
@@ -366,6 +368,32 @@ async function resetGame() {
   $("#modal-scene").showModal();
 }
 
+// ===== Chọn vụ án =====
+function renderScenarioSelect() {
+  const sel = $("#scenario-select");
+  sel.innerHTML = "";
+  for (const sc of state.scenarios) {
+    const opt = document.createElement("option");
+    opt.value = sc.id;
+    opt.textContent = sc.title;
+    sel.appendChild(opt);
+  }
+  sel.value = state.scenarioId;
+}
+
+async function selectScenario(id) {
+  if (id === state.scenarioId) return;
+  const hasProgress = Object.keys(state.histories).length > 0 || state.clues.length > 0 || state.result;
+  if (hasProgress && !confirm("Đổi vụ án sẽ xóa tiến trình điều tra hiện tại. Tiếp tục?")) {
+    $("#scenario-select").value = state.scenarioId;
+    return;
+  }
+  await api("/api/select", { session_id: SID, scenario_id: id });
+  state.current = null;
+  document.querySelectorAll("dialog[open]").forEach((d) => d.close());
+  await init();
+}
+
 // ===== Init =====
 async function init() {
   const res = await fetch(`/api/state?session_id=${encodeURIComponent(SID)}`);
@@ -373,6 +401,8 @@ async function init() {
   Object.assign(state, {
     title: data.title,
     intro: data.intro,
+    scenarioId: data.scenario_id,
+    scenarios: data.scenarios || [],
     suspects: data.suspects,
     locations: data.locations || [],
     clues: data.clues || [],
@@ -384,6 +414,7 @@ async function init() {
   $("#case-title").textContent = data.title;
   $("#scene-text").textContent = data.intro;
 
+  renderScenarioSelect();
   renderSuspects();
   renderChat();
   renderGameOver();
@@ -402,6 +433,7 @@ $("#composer").addEventListener("submit", (e) => {
   sendMessage(text);
 });
 
+$("#scenario-select").addEventListener("change", (e) => selectScenario(e.target.value));
 $("#btn-scene").addEventListener("click", () => $("#modal-scene").showModal());
 $("#btn-notebook").addEventListener("click", () => $("#notebook").classList.toggle("open"));
 $("#btn-accuse").addEventListener("click", () => {
